@@ -1,14 +1,30 @@
 package appcode.thesproutguardian;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 
-public class HelloController {
+public class MainController {
     @FXML
-    private Label welcomeText;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    public void homeButtonClicked(ActionEvent e)
+    {
+        System.out.println("Home");
     }
+    @FXML
+    public void viewButtonClicked(ActionEvent e)
+    {
+
+        System.out.println("View");
+    }
+    @FXML
+    public void settingsButtonClicked(ActionEvent e)
+    {
+        System.out.println("Settings");
+    }
+    @FXML
+    public void aboutButtonClicked(ActionEvent e)
+    {
+        System.out.println("About");
+    }
+
 }

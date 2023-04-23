@@ -1,4 +1,4 @@
-package appcode.thesproutguardian;
+package appcode.thesproutguardian.utile;
 
 public class ComParametersClass {
     ComParametersClass(){

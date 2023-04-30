@@ -13,7 +13,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainApplication extends Application {
-    SproutParam sproutPrameteres;
+    SproutParam sproutParameteres;
     MainController mainController;
     @Override
     public void start(Stage stage) throws IOException {
@@ -33,12 +33,18 @@ public class MainApplication extends Application {
         mainController = fxmlLoader.getController();
 
         Timer timer = new Timer();
-        TimerTask task = new SensorData(mainController.humidityLabel,mainController.temperatureLabel);
-        timer.schedule(task, 100, 5000);
+        TimerTask task = new SensorData(mainController.humidityLabel,
+                mainController.temperatureLabel,
+                mainController.luminosityLabel,
+                mainController.moistureLabel);
+        timer.schedule(task, 100, 1000);
 
-        sproutPrameteres=new SproutParam(25,30,30);
+        sproutParameteres=new SproutParam(-77,-77,-77,-77);
 
-        mainController.humidityLabel.setText(String.valueOf(sproutPrameteres.getHumidity())+"%");
+        mainController.humidityLabel.setText(String.valueOf(sproutParameteres.getHumidity())+"%");
+        mainController.temperatureLabel.setText(String.valueOf(sproutParameteres.getTemperature())+"");
+        mainController.luminosityLabel.setText(String.valueOf(sproutParameteres.getLuminosity())+"%");
+        mainController.moistureLabel.setText(String.valueOf(sproutParameteres.getMoisture())+"%");
         stage.show();
 
 

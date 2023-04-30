@@ -15,9 +15,15 @@ public class SensorData extends TimerTask
     private static StringBuffer content;
     private Label humidityLabel;
     private Label temperatureLabel;
-    public SensorData(Label humidityLabel,Label temperatureLabel){
+
+    private Label luminosityLabel;
+
+    private Label moistureLabel;
+    public SensorData(Label humidityLabel,Label temperatureLabel,Label luminosityLabel,Label moistureLabel){
         this.humidityLabel=humidityLabel;
         this.temperatureLabel=temperatureLabel;
+        this.luminosityLabel=luminosityLabel;
+        this.moistureLabel=moistureLabel;
     }
     public void run()
     {
@@ -50,13 +56,24 @@ public class SensorData extends TimerTask
             double temperature = readings.getTemperature();
             double humidity = readings.getHumidity();
             double luminosity = readings.getLuminosity();
+            double moisture =readings.getMoisture();
             int pumpStatus = readings.getPumpStatus();
             int lightStatus = readings.getPumpStatus();
 
+            SproutParam sproutParam=new SproutParam(readings.getTemperature(),
+                    readings.getHumidity(),
+                    readings.getLuminosity(),
+                    readings.getMoisture());
+
             String temperatureString = String.format("%.1f", temperature);
             String humidityString=String.format("%.0f",humidity)+"%";
+            String luminosityString=String.format("%.0f",luminosity)+"%";
+            String moistureString=String.format("%.0f",sproutParam.getMoisture())+"%";
+
             Platform.runLater(() -> temperatureLabel.setText(temperatureString));
             Platform.runLater(()->humidityLabel.setText(humidityString));
+            Platform.runLater(()->luminosityLabel.setText(luminosityString));
+            Platform.runLater(()->moistureLabel.setText(moistureString));
 
 
         } catch (Exception e) {

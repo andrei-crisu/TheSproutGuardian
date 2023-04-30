@@ -3,6 +3,7 @@ package appcode.thesproutguardian.utile;
 public class SensorReadings {
     public double temperature;
     public double humidity;
+    public double moisture;
     public double luminosity;
     public int pumpStatus;
     public int lightStatus;
@@ -21,6 +22,14 @@ public class SensorReadings {
 
     public void setHumidity(double humidity) {
         this.humidity = humidity;
+    }
+
+    public double getMoisture() {
+        return moisture;
+    }
+
+    public void setMoisture(double moisture) {
+        this.moisture = moisture;
     }
 
     public double getLuminosity() {

@@ -2,9 +2,23 @@ package appcode.thesproutguardian;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 
 public class MainController {
+
+    @FXML
+    public Label humidityLabel;
+
+    @FXML
+    public Label temperatureLabel;
+
+    @FXML
+    public Label luminosityLabel;
+
+    @FXML
+    public Label moistureLabel;
+
     @FXML
     public void homeButtonClicked(ActionEvent e)
     {

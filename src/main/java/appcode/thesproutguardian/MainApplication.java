@@ -31,8 +31,8 @@ public class MainApplication extends Application {
         stage.getIcons().add(new Image(MainApplication.class.getResourceAsStream("/images/sprout.png")));
         stage.setWidth(720);
         stage.setHeight(520);
-        stage.setMinWidth(700);
-        stage.setMinHeight(480);
+        stage.setMinWidth(720);
+        stage.setMinHeight(520);
         stage.setScene(scene);
         mainController = fxmlLoader.getController();
 
@@ -40,10 +40,13 @@ public class MainApplication extends Application {
         TimerTask task = new SensorData(mainController.humidityLabel,
                 mainController.temperatureLabel,
                 mainController.luminosityLabel,
-                mainController.moistureLabel);
+                mainController.moistureLabel,
+                mainController.pumpLabel,
+                mainController.timerLabel);
         timer.schedule(task, 100, 1000);
 
-        sproutParameteres=new SproutParam(-77,-77,-77,-77);
+        sproutParameteres=new SproutParam(-77,-77,-77,
+                -77,0,0);
 
         mainController.humidityLabel.setText(String.valueOf(sproutParameteres.getHumidity())+"%");
         mainController.temperatureLabel.setText(String.valueOf(sproutParameteres.getTemperature())+"");

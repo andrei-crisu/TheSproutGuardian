@@ -20,6 +20,11 @@ public class MainController {
     public Label moistureLabel;
 
     @FXML
+    public Label pumpLabel;
+
+    @FXML Label timerLabel;
+
+    @FXML
     public void homeButtonClicked(ActionEvent e)
     {
         System.out.println("Home");

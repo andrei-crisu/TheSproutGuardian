@@ -8,9 +8,14 @@ public class SensorReadings {
     public int pumpStatus;
     public int lightStatus;
 
+    public double wateringInterval;
+
+    public double checkMoistureTime;
+
     public double getTemperature() {
         return temperature;
     }
+
 
     public void setTemperature(double temperature) {
         this.temperature = temperature;
@@ -56,6 +61,22 @@ public class SensorReadings {
 
     public int getLightStatus() {
     return lightStatus;
+    }
+
+    public double getWateringInterval() {
+        return wateringInterval;
+    }
+
+    public void setWateringInterval(double wateringInterval) {
+        this.wateringInterval = wateringInterval;
+    }
+
+    public double getCheckMoistureTime() {
+        return checkMoistureTime;
+    }
+
+    public void setCheckMoistureTime(double checkMoistureTime) {
+        this.checkMoistureTime = checkMoistureTime;
     }
 
 }

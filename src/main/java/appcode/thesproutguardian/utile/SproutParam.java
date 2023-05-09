@@ -6,11 +6,19 @@ public class SproutParam {
     private double moisture;
     private double luminosity;
 
-    public SproutParam(double temperature, double humidity, double luminosity, double moisture) {
+    private double pumpStatus;
+
+    private double pumpTime;
+    public static int PUMP_ON=255;
+
+    public SproutParam(double temperature, double humidity, double luminosity, double moisture,
+                       double pumpStatus,double pumpTime) {
         this.temperature = temperature;
         this.humidity = humidity;
         this.luminosity = luminosity;
         this.moisture=moisture;
+        this.pumpStatus=pumpStatus;
+        this.pumpTime=pumpTime;
     }
 
     public double getTemperature(){

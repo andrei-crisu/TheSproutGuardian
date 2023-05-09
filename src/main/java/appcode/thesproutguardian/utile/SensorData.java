@@ -9,6 +9,8 @@ import java.net.URL;
 import java.util.TimerTask;
 
 import com.google.gson.Gson;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 
 public class SensorData extends TimerTask
 {
@@ -19,11 +21,19 @@ public class SensorData extends TimerTask
     private Label luminosityLabel;
 
     private Label moistureLabel;
-    public SensorData(Label humidityLabel,Label temperatureLabel,Label luminosityLabel,Label moistureLabel){
+
+    private Label pumpLabel;
+
+    private Label timerLabel;
+    public SensorData(Label humidityLabel,Label temperatureLabel,
+                      Label luminosityLabel,Label moistureLabel,
+                      Label pumpLabel,Label timerLabel){
         this.humidityLabel=humidityLabel;
         this.temperatureLabel=temperatureLabel;
         this.luminosityLabel=luminosityLabel;
         this.moistureLabel=moistureLabel;
+        this.pumpLabel=pumpLabel;
+        this.timerLabel=timerLabel;
     }
     public void run()
     {
@@ -56,24 +66,57 @@ public class SensorData extends TimerTask
             double temperature = readings.getTemperature();
             double humidity = readings.getHumidity();
             double luminosity = readings.getLuminosity();
-            double moisture =readings.getMoisture();
             int pumpStatus = readings.getPumpStatus();
-            int lightStatus = readings.getPumpStatus();
+            //not needed anymore. Created a class instance that stores all those parameters
+            //double moisture =readings.getMoisture();
+           //int lightStatus = readings.getPumpStatus();
+
+            double wateringInterval=readings.getWateringInterval();
+            double pumpTime= readings.getCheckMoistureTime();
+            double leftTime=wateringInterval-pumpTime;
+            if(leftTime<0)
+                leftTime=0;
 
             SproutParam sproutParam=new SproutParam(readings.getTemperature(),
                     readings.getHumidity(),
                     readings.getLuminosity(),
-                    readings.getMoisture());
+                    readings.getMoisture(),
+                    readings.getPumpStatus(),
+                    readings.getCheckMoistureTime());
 
             String temperatureString = String.format("%.1f", temperature);
             String humidityString=String.format("%.0f",humidity)+"%";
             String luminosityString=String.format("%.0f",luminosity)+"%";
             String moistureString=String.format("%.0f",sproutParam.getMoisture())+"%";
+            String timerString=String.format("%.0f",leftTime);
+            String pumpStatusString;
+            Color color;
+            if(pumpStatus==SproutParam.PUMP_ON)
+            {
+                color = Color.web("#799FC3");
+                pumpStatusString = "ON";
+            }
+            else
+            {
+                pumpStatusString="OFF";
+                color = Color.web("#CC1111");
+            }
 
-            Platform.runLater(() -> temperatureLabel.setText(temperatureString));
-            Platform.runLater(()->humidityLabel.setText(humidityString));
+            if(humidity!=0)
+            {
+                Platform.runLater(() -> temperatureLabel.setText(temperatureString));
+                Platform.runLater(() -> humidityLabel.setText(humidityString));
+            }
+
             Platform.runLater(()->luminosityLabel.setText(luminosityString));
             Platform.runLater(()->moistureLabel.setText(moistureString));
+            Platform.runLater(()->pumpLabel.setText(pumpStatusString));
+            Platform.runLater(()->timerLabel.setText(timerString));
+
+
+            Platform.runLater(() -> {
+                pumpLabel.setTextFill(color);
+            });
 
 
         } catch (Exception e) {

@@ -3,7 +3,7 @@
   ## Where gardening meets technology ...
 <br>
 <p align="center">
-<img src="https://github.com/andrei-crisu/TheSproutGuardian/assets/68897925/339db1e6-6135-485f-b414-83eb2835b77c" alt="tsg_home" style="display: block; margin: auto;">  
+<img src="https://github.com/andrei-crisu/TheSproutGuardian/assets/68897925/411713b7-b8ef-4cd2-b005-66e4969c27dd" alt="tsg_home" style="display: block; margin: auto;">  
   
   <br><br>
 </p>
@@ -11,7 +11,7 @@
   ## A modern way to take care of your ornamental plant
   <br>
  <p align="center">
-  <img src="https://github.com/andrei-crisu/TheSproutGuardian/assets/68897925/57e82eb3-662f-42f2-bc28-43deeea542a9" alt="tsg_view" style="display: block; margin: auto;">
+  <img src="https://github.com/andrei-crisu/TheSproutGuardian/assets/68897925/4905ec2f-4da0-44b9-9ef8-a932301c1e2b" alt="tsg_view" style="display: block; margin: auto;">
   
   <br>
   <br>
@@ -31,10 +31,15 @@
 
 <br>
    <p align="center">
-   <img src="https://github.com/andrei-crisu/TheSproutGuardian/assets/68897925/809a68f7-7693-4793-8bad-cc4e37340f66" alt="wifi_connected" style="display: block; margin: auto;">
+   <img src="https://github.com/andrei-crisu/TheSproutGuardian/assets/68897925/223ec6cc-3fce-41dd-ab4a-490d7bfdcfee" alt="wifi_connected" style="display: block; margin: auto;">
   <br>
 
 
 The project above is made to work as a desktop GUI that gets data from ESP32 via Wi-Fi.The code and a brief description for the hardware part can be found at the next link: [Code for ESP 32](https://github.com/andrei-crisu/TheSproutGuardian-ESP32-code).
 
 </p>
+
+
+
+
+

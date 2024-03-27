@@ -1,0 +1,53 @@
+.tab-pane {
+    -fx-background-color: #797B7C;
+}
+
+.tab-pane > .tab-header-area > .headers-region{
+    -fx-font-weight: bold;
+    -fx-font-size: 12pt; /* or any other font size you prefer */
+}
+
+
+.tab-pane > .tab-header-area > .headers-region > .tab {
+    -fx-background-color: linear-gradient(to bottom, derive(#797B7C, 10%), derive(#797B7C, 30%));
+    -fx-background-radius: 10px 10px 0px 0px;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.3), 10, 0, 0, 2);
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected {
+    -fx-background-color: linear-gradient(to bottom, #FFCC33, #FFAA00);
+}
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: transparent;
+}
+
+.text-area {
+    -fx-text-fill: #88CA5E;
+    -fx-background-color: #797B7C;
+    -fx-control-inner-background: #696B6C;
+    -fx-background-radius: 5px;
+}
+
+.text-area .scroll-bar:vertical {
+    -fx-background-color: #A3A3A3; /* Set color of the vertical track */
+    -fx-pref-width: 16px; /* Set width of the vertical track */
+}
+
+.text-area .scroll-bar:horizontal {
+    -fx-background-color: #A3A3A3; /* Set color of the horizontal track */
+    -fx-pref-height: 16px; /* Set height of the horizontal track */
+}
+
+.text-area .scroll-bar:vertical .thumb {
+    -fx-background-color: #777777; /* Set color of the vertical thumb */
+    -fx-pref-width: 12px; /* Set width of the vertical thumb */
+}
+
+.text-area .scroll-bar:horizontal .thumb {
+    -fx-background-color: #777777; /* Set color of the horizontal thumb */
+    -fx-pref-height: 12px; /* Set height of the horizontal thumb */
+}
+
+
+
+

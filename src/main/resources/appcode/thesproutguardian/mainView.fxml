@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="591.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appcode.thesproutguardian.MainController">
+   <children>
+      <TabPane prefHeight="588.0" prefWidth="1372.0" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="200.0" tabMinHeight="30.0" tabMinWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab id="homeTab" text="Home">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="80.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                           <children>
+                              <Label id="timerLabel" fx:id="temperatureLabel11" alignment="CENTER" contentDisplay="CENTER" minWidth="400.0" prefHeight="40.0" prefWidth="400.0" text="The Sprout Guardian" textAlignment="CENTER" textFill="#799fc3">
+                                 <font>
+                                    <Font name="Consolas Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="256.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/seeding.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab text="View">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="160.0" spacing="20.0" HBox.hgrow="SOMETIMES">
+                                       <children>
+                                          <Label id="humidityLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="140.0" text="Humidity" textAlignment="CENTER" textFill="#88ca5e">
+                                             <font>
+                                                <Font name="Consolas Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/humidity_3.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="humidityLabel" fx:id="humidityLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="124.0" text="100%" textAlignment="CENTER" textFill="#88ca5e">
+                                             <font>
+                                                <Font name="Consolas Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="160.0" spacing="20.0" HBox.hgrow="SOMETIMES">
+                                       <children>
+                                          <Label id="humidityLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="140.0" text="Luminosity" textAlignment="CENTER" textFill="#88ca5e">
+                                             <font>
+                                                <Font name="Consolas Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/luminosity.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="luminosityLabel" fx:id="luminosityLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="124.0" text="100%" textAlignment="CENTER" textFill="#88ca5e">
+                                             <font>
+                                                <Font name="Consolas Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="160.0" spacing="20.0" HBox.hgrow="SOMETIMES">
+                                       <children>
+                                          <Label id="humidityLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="151.0" text="Temperature" textAlignment="CENTER" textFill="#88ca5e">
+                                             <font>
+                                                <Font name="Consolas Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/thermometer.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="temperatureLabel" fx:id="temperatureLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="124.0" text="100%" textAlignment="CENTER" textFill="#88ca5e">
+                                             <font>
+                                                <Font name="Consolas Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="160.0" spacing="20.0" HBox.hgrow="SOMETIMES">
+                                       <children>
+                                          <Label id="humidityLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="151.0" text="Moisture" textAlignment="CENTER" textFill="#88ca5e">
+                                             <font>
+                                                <Font name="Consolas Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/moisturizer_brown.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label id="temperatureLabel" fx:id="moistureLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="124.0" text="100%" textAlignment="CENTER" textFill="#88ca5e">
+                                             <font>
+                                                <Font name="Consolas Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="30.0" right="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                 <padding>
+                                    <Insets bottom="40.0" left="50.0" right="50.0" />
+                                 </padding>
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="320.0" spacing="10.0">
+                                       <children>
+                                          <ImageView fx:id="pumpImage" fitHeight="164.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/water_pump_off.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label id="pumpLabel" fx:id="pumpLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="124.0" text="OFF" textAlignment="CENTER" textFill="#cc1111">
+                                             <font>
+                                                <Font name="Consolas Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets top="10.0" />
+                                       </opaqueInsets>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="160.0" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/chronometer.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label id="timerLabel" fx:id="timerLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="124.0" text="0" textAlignment="CENTER" textFill="#88ca5e">
+                                             <font>
+                                                <Font name="Consolas Bold" size="36.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="40.0" />
+                     </padding>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab text="Settings">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="295.0" fitWidth="294.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/setting.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="About">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
+                                 <children>
+                                    <Label id="timerLabel" fx:id="temperatureLabel111" alignment="CENTER" contentDisplay="CENTER" minWidth="216.0" prefHeight="43.0" prefWidth="310.0" text="Attribute" textAlignment="CENTER" textFill="#799fc3">
+                                       <font>
+                                          <Font name="Consolas Bold" size="36.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/tag.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets left="20.0" right="20.0" />
+                                 </opaqueInsets>
+                              </HBox>
+                              <TextArea fx:id="textAreaInfo" editable="false" prefHeight="200.0" prefWidth="200.0" text="- Research icons created by Smartline - Flaticon (https://www.flaticon.com/free-icons/research)&#10;- Icons made by Ilham Fitrotul Hayat from www.flaticon.com' (https://www.flaticon.com/authors/ilham-fitrotul-hayat)&#10;- Info icons created by Freepik - Flaticon (https://www.flaticon.com/free-icons/info)&#10;- Luminosity icons created by Freepik - Flaticon (https://www.flaticon.com/free-icons/luminosity)&#10;- Humidity icons created by Pixel perfect - Flaticon (https://www.flaticon.com/free-icons/humidity)&#10;- Humidity icons created by kmg design - Flaticon (https://www.flaticon.com/free-icons/humidity)&#10;- Humidity icons created by Muhammad Yafinuha - Flaticon (https://www.flaticon.com/free-icons/humidity)&#10;- Temperature icons created by Vitaly Gorbachev - Flaticon (https://www.flaticon.com/free-icons/temperature)&#10;- Moisturizing icons created by Freepik - Flaticon (https://www.flaticon.com/free-icons/moisturizing)&#10;- Water pump icons created by Marz Gallery - Flaticon (https://www.flaticon.com/free-icons/water-pump)&#10;- Timer icons created by Freepik - Flaticon (https://www.flaticon.com/free-icons/timer)&#10;- Tree icons created by Freepik - Flaticon (https://www.flaticon.com/free-icons/tree)&#10;- Label icons created by afif fudin - Flaticon (https://www.flaticon.com/free-icons/label)&#10;" wrapText="true" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Consolas" size="24.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets left="20.0" right="20.0" />
+                                 </opaqueInsets>
+                              </TextArea>
+                           </children>
+                           <opaqueInsets>
+                              <Insets top="40.0" />
+                           </opaqueInsets>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

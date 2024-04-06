@@ -28,4 +28,4 @@
   <img src="other_resources/wifi_image.jpg" alt="wifi_connected" style="display: block; margin: auto;">
 </p>
 
-The project above is designed to work as a desktop GUI that receives data from ESP32 via Wi-Fi. The code and a brief description of the hardware part can be found at the following link: [Code for ESP32](https://github.com/andrei-crisu/TheSproutGuardian-ESP32-code).
+The project above is designed to work as a desktop GUI that receives data from ESP32 via Wi-Fi. The code and a brief description of the hardware part can be found at the following link: [Code for ESP32](https://github.com/andrei-crisu/TheSproutGuardian-Embedded).
